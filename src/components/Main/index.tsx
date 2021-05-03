@@ -1,8 +1,8 @@
-import * as S from './styles'
+import * as S from './styles';
 
 const Main = ({
   title = 'React Avançado',
-  description = 'TypeScript, ReactJS, NextJS e Styled Components'
+  description = 'TypeScript, ReactJS, NextJS e Styled Components',
 }) => (
   <S.Container>
     <S.Logo
@@ -18,4 +18,4 @@ const Main = ({
   </S.Container>
 );
 
-export default Main
+export default Main;
