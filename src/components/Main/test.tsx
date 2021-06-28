@@ -1,11 +1,11 @@
 import { screen } from '@testing-library/react';
-import { renderWithTheme } from 'utils/test/helpers';
+import { renderWithProviders } from 'utils/test/helpers';
 
 import Main from '.';
 
 describe('<Main />', () => {
   it('should render the heading', () => {
-    renderWithTheme(<Main />);
+    renderWithProviders(<Main />);
 
     expect(
       screen.getByRole('heading', { name: /next boilerplate/i })
@@ -13,7 +13,7 @@ describe('<Main />', () => {
   });
 
   it('should render the colors correctly', () => {
-    const { container } = renderWithTheme(<Main />);
+    const { container } = renderWithProviders(<Main />);
 
     expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' });
   });
